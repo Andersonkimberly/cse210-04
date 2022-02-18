@@ -1,7 +1,7 @@
 from game.shared.color import Color
 from game.shared.point import Point
 
-#ryker
+
 class Actor:
     """A visible, moveable thing that participates in the game. 
     
