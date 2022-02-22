@@ -31,6 +31,7 @@ class Director:
             self._do_outputs(cast)
         self._video_service.close_window()
 
+
     def _get_inputs(self, cast):
         """Gets directional input from the keyboard and applies it to the robot.
         
