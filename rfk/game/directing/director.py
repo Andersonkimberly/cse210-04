@@ -66,10 +66,15 @@ class Director:
                 ## Differentiate between rocks and gems to add or subtract points
                 if artifact.get_text() == '*':
                     self._total = self._total + 1
+                    cast.remove_actor('artifacts', artifact)
                 else:
                     self._total = self._total - 1
+                    cast.remove_actor('artifacts', artifact)
                     
             artifact.move_next(max_x, max_y)  
+
+        # if len(artifacts) < 30:
+        #     cast.add_actor("artifacts", artifact)
         
     def _do_outputs(self, cast):
         """Draws the actors on the screen.

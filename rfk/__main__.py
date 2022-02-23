@@ -53,9 +53,6 @@ def main():
     cast.add_actor("robots", robot)
     
     # create the artifacts
-    with open(DATA_PATH) as file:
-        data = file.read()
-        messages = data.splitlines()
 
     for n in range(DEFAULT_ARTIFACTS):
         text = random.choice(['*', '0'])
