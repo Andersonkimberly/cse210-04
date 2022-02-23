@@ -59,8 +59,15 @@ class Director:
         
         for artifact in artifacts:
             if robot.get_position().equals(artifact.get_position()):
-                message = artifact.get_message()
-                banner.set_text(message) 
+                ## Differentiate between rocks and gems to add or subtract points
+                if artifact.get_text() == '*':
+                    total = total + 1
+                    message = artifact.get_message()
+                    banner.set_text(message)  
+                else:
+                    total = total - 1
+                    message = artifact.get_message()
+                    banner.set_text(message)
             artifact.move_next(max_x, max_y)  
         
     def _do_outputs(self, cast):
