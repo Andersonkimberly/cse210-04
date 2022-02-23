@@ -62,7 +62,6 @@ def main():
         position = position.scale(CELL_SIZE) 
 
 
-
         r = random.randint(0, 255)
         g = random.randint(0, 255)
         b = random.randint(0, 255)
@@ -73,8 +72,10 @@ def main():
         artifact.set_font_size(FONT_SIZE)
         artifact.set_color(color)
         artifact.set_position(position)
-        artifact.set_velocity(Point(0,5))
+        artifact.set_velocity(Point(0,random.choice([3,5])))
         cast.add_actor("artifacts", artifact)
+
+        
     
     # start the game
     keyboard_service = KeyboardService(CELL_SIZE)
